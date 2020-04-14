@@ -1,0 +1,5 @@
+package com.lin.javaENUM;
+
+public enum Week2 {
+
+}

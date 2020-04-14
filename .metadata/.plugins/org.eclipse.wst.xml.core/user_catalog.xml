@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://www.springframework.org/schema/tx/spring-tx-4.0.xsd" uri="file:///F:/编程学习资料/传智播客/14-Springmvc推荐学习完全版/02%20SpringMvc提高/源码笔记/01.参考资料/spring约束/spring-tx-4.0.xsd"/>
+  <uri name="http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" uri="file:///C:/编程资料/ssh毕业设计/06-Hibernate框架(学习4天)/day01-Hibernate(一)_hibernate映射文件配置.hibernate入门/day01-Hibernate(一)_hibernate映射文件配置.hibernate入门/day28Hibernate(一)_hibernate映射文件配置.hibernate入门/day01/资料/dtd/hibernate-mapping-3.0.dtd"/>
+  <uri name="&quot;http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd&quot;" uri="file:///C:/编程资料/ssh毕业设计/06-Hibernate框架(学习4天)/day01-Hibernate(一)_hibernate映射文件配置.hibernate入门/day01-Hibernate(一)_hibernate映射文件配置.hibernate入门/day28Hibernate(一)_hibernate映射文件配置.hibernate入门/day01/资料/dtd/hibernate-configuration-3.0.dtd"/>
+  <uri name="http://struts.apache.org/dtds/struts-2.3.dtd" uri="file:///C:/编程资料/ssh毕业设计/07-Struts2框架（学习4天）/day01_Strust入门XML配置-action编写/资料/dtd/struts-2.3.dtd"/>
+</catalog>

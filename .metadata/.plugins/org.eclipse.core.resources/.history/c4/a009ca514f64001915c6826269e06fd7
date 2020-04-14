@@ -1,0 +1,9 @@
+package com.lin.String;
+
+public class stringGet {
+
+	public static void main(String[] args) {
+
+	}
+
+}

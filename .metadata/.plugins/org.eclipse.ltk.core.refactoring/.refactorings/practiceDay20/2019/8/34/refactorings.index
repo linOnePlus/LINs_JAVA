@@ -1,0 +1,7 @@
+1566223182001	Rename type 'demo1'
+1566228091988	Extract method 'method1'
+1566228178587	Rename type 'FileInputStream'
+1566228186454	Rename type 'FileOutputStream'
+1566228227153	Delete element
+1566229731033	Extract method 'method2'
+1566231097968	Rename package 'com.lin.io'

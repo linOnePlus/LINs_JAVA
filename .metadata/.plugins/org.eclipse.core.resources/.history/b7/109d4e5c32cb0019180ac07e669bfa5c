@@ -1,0 +1,20 @@
+package com.lin.bean;
+/*
+*@author linone
+*/
+public class Car {
+
+	private String band;
+	private int price;
+	public void setBand(String band) {
+		this.band = band;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "car [band=" + band + ", price=" + price + "]";
+	}
+	
+}

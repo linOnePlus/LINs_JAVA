@@ -1,0 +1,20 @@
+package com.lin.bean;
+
+import java.util.Date;
+
+/*
+ * 学生封装对象bean
+*@author linone
+*/
+public class Student {
+	private int sid;
+	private String phone;
+	private String sname;
+	private String gender;
+	private String hobby;
+	private String info;
+	private Date date;
+	
+	
+	
+}

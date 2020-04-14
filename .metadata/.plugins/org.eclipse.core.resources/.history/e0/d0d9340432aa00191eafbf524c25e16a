@@ -1,0 +1,10 @@
+package com.lin.javaENUM;
+
+public class TEST {
+
+	public static void main(String[] args) {
+ Week1 mon = Week1.MON;
+ System.out.println(mon);
+	}
+
+}

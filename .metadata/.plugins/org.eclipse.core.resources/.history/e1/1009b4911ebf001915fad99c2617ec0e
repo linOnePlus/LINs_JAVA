@@ -1,0 +1,14 @@
+package com.lin.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.lin.bean.Student;
+
+/*
+*@author linone
+*/
+public interface StudentService {
+
+	List<Student> finAll() throws SQLException;
+}

@@ -1,0 +1,22 @@
+package com.lin.dao.impl;
+
+import java.util.List;
+
+import com.lin.bean.Student;
+import com.lin.dao.StudentDao;
+
+/*
+ * StudentDao的具体实现类 针对前面定义的规范 做出具体的实现
+*@author linone
+*/
+public class StudentDaoimpl implements StudentDao {
+
+	/**
+	 * 查询所有学生
+	 */
+	@Override
+	public List<Student> finAll() {
+		return null;
+	}
+
+}

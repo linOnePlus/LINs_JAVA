@@ -1,0 +1,25 @@
+package com.lin.dao;
+/*
+*@author linone
+*/
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.lin.bean.Student;
+
+public interface StudentDao {
+	/**
+	  * 查询所有学生
+	 * @return List<Student>
+	 * @throws SQLException 
+	 */
+	List<Student> finAll() throws SQLException;
+	
+	/**
+	 * 添加学生
+	 * @param 需要添加到数据库的学生对象
+	 * @throws SQLException 
+	 */
+	void insert(Student s) throws SQLException;
+}

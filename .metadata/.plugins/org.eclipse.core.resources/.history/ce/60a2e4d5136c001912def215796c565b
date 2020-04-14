@@ -1,0 +1,18 @@
+package suanFa;
+
+public class erfenchazhao {
+
+	public static void main(String[] args) {
+int [] arr={22,33,44,55,66,77,88};
+		System.out.println(5/2);
+	}
+
+	public static int erfen(int [] arr, int i){
+		int min = 0;
+		int max = arr.length-1;
+		
+		
+		return 1;
+		
+	}
+}

@@ -1,0 +1,164 @@
+package ai;
+import java.util.*;
+
+class demo {
+
+    public demo() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public static void main(String[] args) {
+        EightNumProblem proble=new EightNumProblem();
+        proble.solve();
+    }
+
+}
+
+class EightNumProblem{
+    int source[][] ={{1,2,3},{4,5,0},{6,7,8}};//构造一个二维 3 * 3 数组【源数据】
+    int target[][] ={{1,2,3},{4,5,6},{7,8,0}};//构造一个二维 3 * 3 数组【目标数据】
+    class myInt{
+        int i=0;
+        int get(){return i;}
+        void set(int in){i=in;}
+        myInt(){}
+        myInt(int in){i=in;}
+    }
+    class ints{            //解决问题的数据结构。
+        protected myInt[][] data=new myInt[3][3];//内部数据
+        protected int parent;//父编号，用于回溯
+        ints(){
+            
+        }
+        ints(ints obj){//拷贝构造函数
+            int i,j;
+            data=new myInt[3][3];
+            for(i=0;i<3;i++) for(j=0;j<3;j++){//拷贝data
+                data[i][j]=new myInt();
+                data[i][j].set(obj.data[i][j].get());
+            }
+            this.parent=obj.parent;//拷贝父编号
+        }
+        ints(int[][] in){
+            int i,j;
+            for(i=0;i<3;i++) for(j=0;j<3;j++) data[i][j]=new myInt(in[i][j]);
+        }
+        int get(int i,int j){
+            return data[i][j].get();
+        }
+        void set(int i,int j,int in){
+            data[i][j].set(in);
+        }
+        public String toString(){//重写用于打印
+            int i,j;
+            String re=new String("");
+            for(i=0;i<3;i++){
+                for(j=0;j<3;j++){
+                    re+=Integer.toString(data[i][j].get());
+                    if(j!=2) re+=",";}
+                re+="\n";
+            }
+            return re;
+        }
+        void FindPos(int target,myInt X,myInt Y){//寻找目标元素，并传指 X、Y 返回。
+            int i,j;
+            for(i=0;i<3;i++) for(j=0;j<3;j++) if(target==data[i][j].get()){//循环，找到目标元素
+                X.set(i);//传指
+                Y.set(j);
+                return;
+            }
+        }
+        boolean Move(int mod){
+            myInt X=new myInt();
+            myInt Y=new myInt();
+            FindPos(0,X,Y);
+            int x=X.get();
+            int y=Y.get();//找到0的位置
+        //    System.out.println("x="+x+"y="+y);
+            switch(mod){
+            case 0://上
+                if(y>0) swap(x,y,x,y-1);
+                else return false;
+                break;
+            case 1://下
+                if(y<2) swap(x,y,x,y+1);
+                else return false;
+                break;
+            case 2://左
+                if(x>0) swap(x,y,x-1,y);
+                else return false;
+                break;
+            default://右
+                if(x<2) swap(x,y,x+1,y);
+                else return false;
+                break;
+            }
+            return true;
+        }
+        void swap(int x1,int y1,int x2,int y2){//(x1,y1)与(x2,y2)交换
+            int tmp=data[x1][y1].get();                //tmp=x1
+            data[x1][y1].set(data[x2][y2].get());    //x1=x2
+            data[x2][y2].set(tmp);                    //x2=tmp
+        }
+        boolean FindTarget(int[][] obj){//找到目标
+            int i,j;
+            for(i=0;i<3;i++) for(j=0;j<3;j++) if(obj[i][j]!=data[i][j].get()) return false;//只要有一个不符，错误
+            return true;
+        }
+        boolean equalWith(ints obj){//与目标相同
+            int i,j;
+            for(i=0;i<3;i++) 
+                for(j=0;j<3;j++) 
+                    if(obj.data[i][j].get()!=data[i][j].get()) return false;//只要有一个不符，错误
+            return true;
+        }
+    }
+
+    List<ints> queue=new ArrayList<ints>();//设置队列
+    
+    EightNumProblem(){}
+        
+    boolean FindInQueue(ints elem){//查看队列中是否有该元素
+        for(int i=0;i<queue.size();i++){
+            if(elem.equalWith(queue.get(i))){
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
+    void solve(){
+        ints root=new ints(source);//用源数据构造根节点
+        root.parent=-1;//父编号设置特殊值: -1
+        int front=0;
+        int rear=0;
+        queue.add(root);//根节点入队
+        rear++;
+        int flag=0;
+        while(front<rear && flag<100000){
+            for(int j=0;j<4;j++){    
+                flag++;
+                ints tmp=queue.get(front);        //出队
+                ints node=new ints(tmp);        //拷贝出新的结点
+                if(node.Move(j) && (!FindInQueue(node)) ){        //如果变换成功 并且这个结点在队列中是新的
+                    node.parent=front;
+                    if(node.FindTarget(target)){
+                        System.out.println("找到");
+                        PrintSource(node);
+                        return;        //找到目标，跳出循环
+                    }
+                    queue.add(node);
+                    rear++;                        //入队
+                }
+            }
+            front++;
+        }    
+    }
+    void PrintSource(ints obj){
+        while(obj.parent!=-1){
+            System.out.println(obj);
+            obj=queue.get(obj.parent);
+        }
+    }
+}

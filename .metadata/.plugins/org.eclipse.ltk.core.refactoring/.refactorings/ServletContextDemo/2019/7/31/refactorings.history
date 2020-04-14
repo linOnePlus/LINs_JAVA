@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.lin.demo.count&apos; to &apos;countServlet&apos;&#x0D;&#x0A;- Original project: &apos;ServletContextDemo&apos;&#x0D;&#x0A;- Original element: &apos;com.lin.demo.count&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lin.demo.countServlet&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;count&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.lin.demo{count.java[count" matchStrategy="1" name="countServlet" qualified="false" references="true" similarDeclarations="false" stamp="1564477073459" textual="false" version="1.0"/>
+</session>

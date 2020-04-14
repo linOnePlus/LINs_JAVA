@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowDerived" value="false"/>
+		<item key="ShowStatusLine" value="true"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="FilterByLocation" value="false"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_Y_ORIGIN" value="195"/>
+			<item key="DIALOG_X_ORIGIN" value="668"/>
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+		</section>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\jin10\Desktop\CRM客户关系管理系统\crm_ycc"/>
+			<item value="C:\Users\jin10\Desktop\crm"/>
+			<item value="C:\编程资料\ssh毕业设计\06-Hibernate框架(学习4天)\day01-Hibernate(一)_hibernate映射文件配置.hibernate入门\day01-Hibernate(一)_hibernate映射文件配置.hibernate入门\day28Hibernate(一)_hibernate映射文件配置.hibernate入门\day01\资料\代码\hibernate_day01"/>
+			<item value="F:\编程学习资料\传智播客\14-Springmvc推荐学习完全版\02 SpringMvc提高\源码笔记\01.参考资料\springmvc-mybatis02"/>
+			<item value="F:\编程学习资料\传智播客\14-Springmvc推荐学习完全版\01 SpringMvc基础\源码笔记\01.参考资料\springmvc-mybatis"/>
+			<item value="F:\编程学习资料\传智播客\14-SpringMVC(学习2天)\springmvc-day1\工程\03-springmvc-mybatis"/>
+			<item value="F:\编程学习资料\传智播客\01 SpringMvc基础\源码笔记\01.参考资料\springmvc-mybatisheima"/>
+			<item value="C:\Users\LZJ\Desktop\generatorSqlmapCustom"/>
+			<item value="C:\Users\LZJ\Desktop\LINs_Workplace\LINs_JAVA\chinese"/>
+			<item value="C:\Users\LZJ\Desktop\LINs_Workplace\LINs_JAVA\filter"/>
+			<item value="C:\Users\LZJ\Desktop\LINs_Workplace\LINs_JAVA\ajax"/>
+			<item value="D:\BaiduNetdiskDownload\尚硅谷_Spring_代码及PPT\代码及PPT\spring-4"/>
+			<item value="D:\Downloads\springmvc"/>
+			<item value="D:\BaiduNetdiskDownload\spring学习资料\spring (2)"/>
+			<item value="D:\BaiduNetdiskDownload\spring学习资料\spring (1)"/>
+			<item value="D:\BaiduNetdiskDownload\spring学习资料\spring"/>
+			<item value="D:\BaiduNetdiskDownload\04-JavaWeb知识(学习12天)\day16\code&amp;资料\code\day16"/>
+			<item value="D:\BaiduNetdiskDownload\04-JavaWeb知识(学习12天)\day15\code&amp;资料\code\stu"/>
+			<item value="D:\BaiduNetdiskDownload\04-JavaWeb知识(学习12天)\day15\code&amp;资料\code\ConnectionPool"/>
+			<item value="D:\LINs_Workplace\LINs_JAVA\HttpServletRequest"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="D:\LINs_Workplace\LINs_JAVA\jdbcconnectionpool\jdbc.properties"/>
+		</list>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_Y_ORIGIN" value="8"/>
+		<item key="DIALOG_X_ORIGIN" value="250"/>
+		<item key="DIALOG_HEIGHT" value="598"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="587"/>
+		<item key="DIALOG_Y_ORIGIN" value="162"/>
+		<item key="DIALOG_WIDTH" value="747"/>
+		<item key="DIALOG_HEIGHT" value="522"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
+</section>

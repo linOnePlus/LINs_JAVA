@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void bianli(String str)&apos; from &apos;com.lin.String.stringbianli.main()&apos; to &apos;com.lin.String.stringbianli&apos;&#x0D;&#x0A;- Original project: &apos;practiceDay12&apos;&#x0D;&#x0A;- Method name: &apos;bianli&apos;&#x0D;&#x0A;- Destination type: &apos;com.lin.String.stringbianli&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;bianli&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.lin.String{stringbianli.java" name="bianli" replace="false" selection="143 103" stamp="1557066328000" version="1.0" visibility="2"/>
+</session>

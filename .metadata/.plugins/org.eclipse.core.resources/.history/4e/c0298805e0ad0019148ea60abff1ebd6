@@ -1,0 +1,45 @@
+package com.lin.demo;
+
+/*對用戶名和密碼的判斷功能*/
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ServletContext03
+ */
+@WebServlet("/ServletContext03")
+public class ServletContext03 extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	 //獲取數據功能
+		String username = request.getParameter("username");
+		//暫時簡化從數據庫中獲取功能的作用
+		String password = request.getParameter("password");
+		if (username=="lin" && password =="872690700") {
+			
+			
+			//跳轉到另一頁面
+			response.setStatus(302);
+			response.setHeader("Location", "succeed.html");
+		} else {
+			//寫出數據
+			PrintWriter writer = response.getWriter();
+			writer.write("login fail");
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

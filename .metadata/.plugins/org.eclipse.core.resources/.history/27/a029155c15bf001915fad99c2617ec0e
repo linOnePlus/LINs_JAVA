@@ -1,0 +1,11 @@
+package com.lin.dao;
+/*
+*@author linone
+*/
+
+import java.util.List;
+
+public interface StudentDao {
+
+	List<Student> finAll();
+}

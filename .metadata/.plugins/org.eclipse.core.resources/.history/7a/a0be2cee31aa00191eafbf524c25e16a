@@ -1,0 +1,6 @@
+package com.lin.javaENUM;
+//java 自带枚举类之有参构造
+public enum Week2 {
+	MON,TUE,WED;
+	
+}

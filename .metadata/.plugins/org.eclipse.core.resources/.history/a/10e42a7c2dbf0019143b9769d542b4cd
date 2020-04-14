@@ -1,0 +1,67 @@
+package com.lin.bean;
+
+import java.util.Date;
+
+/*
+ * 学生封装对象bean
+*@author linone
+*/
+public class Student {
+	private int sid;
+	private String phone;
+	private String sname;
+	private String gender;
+	private String hobby;
+	private String info;
+	private Date date;
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getHobby() {
+		return hobby;
+	}
+	public void setHobby(String hobby) {
+		this.hobby = hobby;
+	}
+	public String getInfo() {
+		return info;
+	}
+	public void setInfo(String info) {
+		this.info = info;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	@Override
+	public String toString() {
+		return "Student [sid=" + sid + ", phone=" + phone + ", sname=" + sname + ", gender=" + gender + ", hobby="
+				+ hobby + ", info=" + info + ", date=" + date + "]";
+	}
+	
+	
+	
+}

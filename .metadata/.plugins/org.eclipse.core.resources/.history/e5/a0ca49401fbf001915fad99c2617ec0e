@@ -1,0 +1,8 @@
+package com.lin.serviceimpl;
+/*
+ * 学生业务的实现类
+*@author linone
+*/
+public class StudentServiceImpl {
+
+}

@@ -1,0 +1,26 @@
+package com.lin.serviceimpl;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.lin.bean.Student;
+import com.lin.dao.StudentDao;
+import com.lin.dao.impl.StudentDaoimpl;
+import com.lin.service.StudentService;
+
+/*
+ * 学生业务的实现类
+*@author linone
+*/
+public class StudentServiceImpl implements StudentService{
+
+	/**
+	 * 功能交给dao实现 单一逻辑（查询）
+	 */
+	@Override
+	public List<Student> finAll() throws SQLException {
+		StudentDao dao = new StudentDaoimpl();
+		return dao.finAll();
+	}
+
+}

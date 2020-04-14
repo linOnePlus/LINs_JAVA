@@ -1,0 +1,32 @@
+package com.lin.servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * 处理分页显示学生信息
+ */
+@WebServlet("/StudentListPageServlet")
+public class StudentListPageServlet extends HttpServlet {
+	
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//1.获取需要显示信息的页码数
+		int currentPage = Integer.parseInt(request.getParameter("currentPage"));
+		
+		//2.根据页码数获取需要的信息
+		
+		//3 .跳转页面
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Browse/ck&apos; to &apos;lib&apos;" description="Rename resource &apos;ck&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ck" name="lib" stamp="1565794865913" updateReferences="true"/>
+</session>

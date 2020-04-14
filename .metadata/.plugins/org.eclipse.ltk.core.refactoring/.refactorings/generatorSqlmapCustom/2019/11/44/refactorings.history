@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;mybatis03-spring/src&apos;&#x0D;&#x0A;- Original project: &apos;generatorSqlmapCustom&apos;&#x0D;&#x0A;- Destination element: &apos;mybatis03-spring/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     generatorSqlmapCustom/src/com.lin.nixiang.pojo&#x0D;&#x0A;     generatorSqlmapCustom/src/com.lin.nixiang.mapper" description="Copy packages" destination="=mybatis03-spring/src" element1="/src&lt;com.lin.nixiang.pojo" element2="/src&lt;com.lin.nixiang.mapper" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1572597407507" version="1.0"/>
+</session>

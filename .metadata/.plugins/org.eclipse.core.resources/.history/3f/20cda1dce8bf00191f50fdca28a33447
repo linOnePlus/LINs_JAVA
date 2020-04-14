@@ -1,0 +1,42 @@
+package com.lin.dao.impl;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+
+import com.lin.bean.Student;
+import com.lin.dao.StudentDao;
+import com.lin.util.JDBCUtil_c3p0;
+
+/*
+ * StudentDao的具体实现类 针对前面定义的规范 做出具体的实现
+*@author linone
+*/
+public class StudentDaoimpl implements StudentDao {
+
+	/**
+	 * 查询所有学生 返回一个List集合
+	 * @throws SQLException 
+	 */
+	@Override
+	public List<Student> finAll() throws SQLException {
+		QueryRunner queryRunner = new QueryRunner(JDBCUtil_c3p0.getDataSource());
+		List<Student> query = queryRunner.query("select * from stu", new BeanListHandler<Student>(Student.class));
+		return query;
+	}
+
+	@Override
+	public void insert(Student stu) throws SQLException {
+		QueryRunner queryRunner = new QueryRunner(JDBCUtil_c3p0.getDataSource());
+		queryRunner.update("insert into stu values(null,?,?,?,?,?,?)", 
+				stu.getSname(),
+				stu.getGender(),
+				stu.getPhone(),
+				stu.getBirthday(),
+				stu.getHobby(),
+				stu.getInfo());
+	}
+
+}
