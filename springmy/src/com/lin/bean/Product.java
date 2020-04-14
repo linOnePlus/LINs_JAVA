@@ -1,0 +1,22 @@
+package com.lin.bean;
+/*
+ * Spring的BEAN好像都要GET/set方法
+*@author linone
+*/
+public class Product {
+private int price;
+private String name;
+public int getPrice() {
+	return price;
+}
+public void setPrice(int price) {
+	this.price = price;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+
+}

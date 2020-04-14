@@ -1,0 +1,75 @@
+.nav navbar-nar navbar-left {
+		float: left;
+	}
+
+	#bg {
+		border: 1px solid #000000;
+
+		background-image: url(../img/IMG_7581.jpg);
+		width: 100%;
+		height: 500px;
+		background-size: cover;
+		position: absolute;
+		opacity: 0.8;
+		z-index: 0;
+	}
+
+	#trip {
+		z-index: 1;
+		background-color: transparent;
+		position: relative;
+		top: 380px;
+
+	}
+
+	#logo {
+		width: 40px;
+		height: 40px;
+		margin-left: 0px;
+		margin-top: 0px;
+
+	}
+
+	.denglu {
+		color: white;
+		@font-size-small: ceil((@font-size-base * 0.85));
+	}
+
+	#daohanglan {
+		background: rgba(0, 0, 0, 0);
+		top: 150px;
+		left: 250px;
+
+	}
+
+	.clearfix {
+		margin: 200px auto;
+		background: rgba(255, 255, 255, 0.2);
+	}
+
+	.thumbnail {
+		width: 350px;
+		height: 450px;
+	}
+
+	#serch {
+
+
+
+		top: 250px;
+		height: 40px;
+		width: 550px;
+		border-radius: 5px;
+		font-size: 15px;
+		transition: 0.5s; //过渡动画时间
+		background-color: rgb(175, 200, 223);
+		border: none;
+	}
+
+	.serch {
+		height: 40px;
+	}
+
+	#copyright {
+		text-align: center;
+	}

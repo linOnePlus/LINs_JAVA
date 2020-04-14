@@ -1,0 +1,37 @@
+body {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0 auto;
+	top: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../img/33.jpg);
+	opacity: 0.8;
+
+}
+
+div>.glyphicon {
+	display: inline-block;
+	top: 29px;
+	left: 6px;
+	position: relative;
+	color: #ccc;
+}
+
+input[type="text"],
+input[type="password"] {
+	padding-left: 26px;
+}
+
+.checkbox {
+	padding-left: 21px;
+}
+
+.form {
+	width: 400px;
+	margin: 100px auto;
+	/* 实现登录框背景透明 */
+	background: rgba(255, 255, 255, 0.2);
+
+}

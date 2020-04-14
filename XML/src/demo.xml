@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stus>
+<stu id="1" >
+<name>linzejia</name>
+<age>20</age>
+</stu>
+<stu id="2">
+<name>hongxueyun</name>
+<age>19</age>
+</stu>
+</stus>

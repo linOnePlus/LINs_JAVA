@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<!-- 命名空间 用来隔离sql语句 -->
+	<!-- id 语句的标识 parameter type 传入参数的类型 resulttype 查询结果的返回类型 写全类名 -->
+	<select id="getUserById" parameterType="int"
+		resultType="com.lin.pojo.User">
+		select * from user where id =#{sb};
+		<!-- #{}相当于占位符 ？ 里面内容代表pojo里面的属性    ${}字符串拼接指令 如果是普通数据类型 里面只能写value ， -->
+	</select>
+
+	<!-- 查出来的返回值类型是一个集合 只要写集合里面的参数类型就可以 -->
+	<select id="getUserByUsername" parameterType="string"
+		resultType="com.lin.pojo.User">
+		select username,birthday from user where username like '%${value}%';
+	</select>
+
+	<!-- useGeneratedKeys表示主键为自增长模式 
+	 keyProperty:与useGeneratedKeys配套使用，用于绑定主键接收的pojo属性-->
+	<insert id="insertUser" parameterType="com.lin.pojo.User" useGeneratedKeys="true" keyProperty="id">
+		<!--主键返回 keyproperty pojo中的主键属性 resulttype 主键类型 order在插入语句之后执行 只能大写 -->
+		<!-- <selectKey keyProperty="id" resultType="int" order="AFTER"> select 
+			last_insert_id(); </selectKey> -->
+		insert into user
+		values(null,#{username},#{birthday},#{sex},#{address},null)
+	</insert>
+
+	
+</mapper>

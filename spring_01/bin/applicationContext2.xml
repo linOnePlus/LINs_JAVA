@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--测试作用域  -->
+	<bean id="student" class="com.lin.bean.Student" scope="singleton" p:age="20" p:name="lin" p:sex="man"></bean>
+	<bean id="student2" class="com.lin.bean.Student" scope="prototype" p:age="23"></bean>
+</beans>

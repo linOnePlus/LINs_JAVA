@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lin.dao.UserDao"><!--命名空间 接口名称必须是接口全路径名  保证了测试类能找到这个映射文件-->
+
+<sql id="usersql">
+username,birthday
+</sql>
+	<select id="getUserById" parameterType="int" resultType="com.lin.pojo.User"><!-- 接口方法名必须与sql id一致 -->
+		select * from user where id =#{id};
+	</select>
+	
+	<select id="getUserByUsername" parameterType="string" resultType="com.lin.pojo.User"><!-- 接口的返回值类型必须与resulttype一致 -->
+		select username,birthday from user where username like'%${value}%';
+	</select>
+	
+	<insert id="insertUser" parameterType="com.lin.pojo.User" useGeneratedKeys="true" keyProperty="id"><!--接口的入参必须与parametertype一致  -->
+		insert into user values(null,#{username},#{birthday},#{sex},#{address},null)
+	</insert>
+	
+    <select id="getUserByUserBuffered" parameterType="com.lin.pojo.UserBuffered" resultType="com.lin.pojo.User"><!-- 测试包装类 -->
+		select username,birthday from user where username like'%${user.username}%';
+	</select>
+	
+	<!-- 测试if标签 -->
+	<select id="getUserByif" parameterType="com.lin.pojo.User" resultType="com.lin.pojo.User">
+		select <include refid="usersql"></include>from user 
+		<where>
+		<if test="username!=null and username!=''"> and username like'%${username}%'</if>
+		<if test="sex!=null and sex!=''"> and sex =#{sex}</if>
+		</where>
+	</select>
+	
+	<!-- 测试foreach标签 -->
+	<select id="getUserByForeach" parameterType="com.lin.pojo.UserBuffered" resultType="com.lin.pojo.User">
+	select * from user where 
+	<foreach collection="ids" open="id in (" item="id" separator="," close=")">
+	#{id}
+	</foreach>
+	</select>
+	
+	<!-- 测试一对多查询 -->
+	<resultMap type="com.lin.pojo.User" id="UserOrder">
+	<id property="id" column="id"/>
+	<result property="username" column="username"/>
+	<result property="birthday" column="birthday"/>
+	<!--     collection:配置一对多关系
+			 property:另一张表在该表对应的成员变量（用户下的order属性）
+			 ofType:property的数据类型，支持别名
+	-->
+	<collection property="orders" ofType="com.lin.pojo.Order">
+	<!-- 同样 id 用于配置主键， resulte用于配置其他属性和列名的对应关系 -->
+	<id property="id" column="oid"/>
+	<result property="userId" column="user_id"/>
+	<result property="number" column="number"/>
+	<result property="note" column="note"/>
+	</collection>
+	</resultMap>
+	<select id="getUserOrder" resultMap="UserOrder">
+	select 
+	u.id,
+	u.username,
+	u.birthday,
+	o.id as oid,
+	o.user_id,
+	o.number,
+	o.note
+ 	from `user` as u left join `order` as o 
+ 	on o.user_id = u.id
+ 	</select>
+</mapper>

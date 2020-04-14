@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="car2" class="com.lin.bean.Car">
+<property name="band" value="aodi"></property>
+<property name="price" value="2000"></property>
+</bean>
+<!-- 演示SPEL的用法 -->
+<bean id="Student" class="com.lin.bean.Student">
+<!-- 引入静态变量 -->
+<property name="age" value="#{T(java.lang.Math).PI*30}"></property>
+<!-- 引入其他bean -->
+<property name="car" value="#{car2}"></property>
+<!--引入其他bean的属性 属性必须是PUBLIC修饰的  -->
+<property name="name" value="#{car2.price}"></property>
+<!--Spel里面加运算符  -->
+<property name="sex" value="#{car2.price>1999? 'man' : 'girl'}"></property>
+</bean>
+
+
+</beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--测试bean的生命周期  -->
+<!-- 设置bean创建前和创建后执行的方法 -->
+<bean id="car2" class="com.lin.bean.Car2" init-method="init"  destroy-method="destory"> 
+<property name="brand" value="aodi"></property>
+</bean>
+<!-- 配置后置处理器 -->
+<bean class="com.lin.test.MyBeanPostProcessor"> </bean>
+</beans>
